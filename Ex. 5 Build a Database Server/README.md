@@ -2,9 +2,9 @@
 
 ## Author
 
-* **Name**: ________________________________
-* **Register Number**: _____________________
-* **Date of Submission**: __________________
+* **Name**: Santhose Arockiaraj J
+* **Register Number**: 212224230248
+* **Date of Submission**: 23/08/2026
 
 ---
 
@@ -82,13 +82,16 @@ Test the database server by connecting to it locally or remotely and performing 
 
 ## Workflow (Student Explanation)
 
-(Write the steps you followed in your own words)
+First, I opened the AWS Management Console and went to the VPC service. I created a new security group named DB Security Group and configured it to allow MySQL (port 3306) access from the Web Security Group.
 
-1. ---
-2. ---
-3. ---
-4. ---
-5. ---
+Next, I navigated to the RDS service and created a DB Subnet Group named DB-Subnet-Group. I selected the Lab VPC, chose two availability zones (us-east-1a and us-east-1b), and added the required subnets (10.0.1.0/24 and 10.0.3.0/24).
+
+After that, I created a new Amazon RDS MySQL database instance. I selected Dev/Test template, enabled Multi-AZ deployment, and configured details like DB identifier (lab-db), username (main), and password (lab-password). I also selected db.t3.micro instance type and attached the DB Security Group.
+
+Once the database was created, I waited until its status became available and then copied the endpoint URL from the connectivity section.
+
+Finally, I opened the web application using the provided EC2 IP address, navigated to the RDS section, and entered the database details (endpoint, database name, username, password). After submitting, I successfully connected the app and tested it by adding and managing contacts in the address book.
+
 
 ---
 
@@ -96,19 +99,24 @@ Test the database server by connecting to it locally or remotely and performing 
 
 ### Screenshot 1: EC2 Instance for Database Server
 
-(Insert Screenshot Here)
+<img width="1365" height="643" alt="Screenshot 2026-08-22 092242" src="https://github.com/user-attachments/assets/023bd0e6-63cc-4923-b942-c658b29ff34d" />
+
 
 ---
 
 ### Screenshot 2: Database Service Running
 
-(Insert Screenshot Here)
+
+<img width="1365" height="643" alt="Screenshot 2026-08-22 092518" src="https://github.com/user-attachments/assets/6d717728-b8d9-415f-9f18-597e9a625ec3" />
+<img width="1364" height="644" alt="Screenshot 2026-08-22 093916" src="https://github.com/user-attachments/assets/4a158cae-4302-4f8f-9c49-f57b188e200f" />
 
 ---
 
 ### Screenshot 3: Sample Database and Table
 
-(Insert Screenshot Here)
+
+<img width="1365" height="722" alt="Screenshot 2026-08-23 215622" src="https://github.com/user-attachments/assets/2f5061aa-4514-4d1f-9f9d-8ac56a0a657f" />
+<img width="1365" height="639" alt="Screenshot 2026-08-23 215836" src="https://github.com/user-attachments/assets/0e5d4648-32b3-40e9-8d52-ab620959942e" />
 
 ---
 
